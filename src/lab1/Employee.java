@@ -24,7 +24,7 @@ public class Employee {
     
     
 
-    public void orentation(String firstname, String lastName, String ssn,
+    public void giveOrentation(String firstname, String lastName, String ssn,
             Date birthDate, String cubeID) {
 
         this.setFirstName(firstName);
@@ -36,29 +36,69 @@ public class Employee {
         this.reviewDeptPolicies();
         this.moveIntoCubicle(cubeID);
         
+        
+    }
+
+    public boolean isMeetWithHrForBenefitAndSalryInfo() {
+        return meetWithHrForBenefitAndSalryInfo;
+    }
+
+    public void setMeetWithHrForBenefitAndSalryInfo(boolean meetWithHrForBenefitAndSalryInfo) {
+        // needs valadition
+        this.meetWithHrForBenefitAndSalryInfo = meetWithHrForBenefitAndSalryInfo;
+    }
+
+    public boolean isMeetDepartmentStaff() {
+        return meetDepartmentStaff;
+    }
+
+    public void setMeetDepartmentStaff(boolean meetDepartmentStaff) {
+        //needs valadition
+        this.meetDepartmentStaff = meetDepartmentStaff;
+    }
+
+    public boolean isReviewDeptPolicies() {
+        return reviewDeptPolicies;
+    }
+
+    public void setReviewDeptPolicies(boolean reviewDeptPolicies) {
+       // needs valadition
+        this.reviewDeptPolicies = reviewDeptPolicies;
+    }
+
+    private boolean isMoveIntoCubicle() {
+        return moveIntoCubicle;
+    }
+
+    public void setMoveIntoCubicle(boolean moveIntoCubicle) {
+        //needs valadition
+        this.moveIntoCubicle = moveIntoCubicle;
     }
 
     private boolean isMetDeptStaff() {
         return meetDepartmentStaff;
     }
 
-    private void setMetDeptStaff(boolean metDeptStaff) {
+    public void setMetDeptStaff(boolean metDeptStaff) {
+        //needs valadition
         this.meetDepartmentStaff = metDeptStaff;
     }
 
-    public boolean isReviewedDeptPolicies() {
+    private boolean isReviewedDeptPolicies() {
         return reviewDeptPolicies;
     }
 
-    public void setReviewedDeptPolicies(boolean reviewedDeptPolicies) {
+    private void setReviewedDeptPolicies(boolean reviewedDeptPolicies) {
+        //needs validation
         this.reviewDeptPolicies = reviewedDeptPolicies;
     }
 
-    public boolean isMovedIn() {
+    private boolean isMovedIn() {
         return moveIntoCubicle;
     }
 
     public void setMovedIn(boolean movedIn) {
+        //needs valadition
         this.moveIntoCubicle = movedIn;
     }
     
@@ -68,7 +108,9 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
-        if(firstName == null)
+        if(firstName == null){
+            System.out.println("Enter a Valid first name");
+        }
         this.firstName = firstName;
     }
 
@@ -77,6 +119,7 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
+        // needs valadition
         this.lastName = lastName;
     }
 
@@ -85,6 +128,7 @@ public class Employee {
     }
 
     public void setSsn(String ssn) {
+        //needs valadition
         this.ssn = ssn;
     }
 
@@ -93,6 +137,7 @@ public class Employee {
     }
 
     public void setBirthDate(Date birthDate) {
+        //needs valadidation
         this.birthDate = birthDate;
     }
 
@@ -101,25 +146,30 @@ public class Employee {
     }
 
     public void setCubeId(String cubeId) {
+        if(cubeId == null){
+           System.out.println("Enter a valid cubicale ID");
+           
+        }
         this.cubeId = cubeId;
     }
      public Employee() {
     }
 
     // Assume this must be performed first
-    public void meetWithHrForBenefitAndSalryInfo() {
+    private void meetWithHrForBenefitAndSalryInfo() {
+        //
     }
 
     // Assume this is must be performed second
-    public void meetDepartmentStaff() {
+    private void meetDepartmentStaff() {
     }
 
     // Assume this must be performed third
-    public void reviewDeptPolicies() {
+    private void reviewDeptPolicies() {
     }
 
     // Assume this must be performed 4th
-    public void moveIntoCubicle(String cubeId) {
+    private void moveIntoCubicle(String cubeId) {
     }
 
     public String getStatus() {
