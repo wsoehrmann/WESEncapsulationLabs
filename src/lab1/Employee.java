@@ -21,8 +21,6 @@ public class Employee {
     private boolean reviewDeptPolicies;
     private boolean moveIntoCubicle;
     private String cubeId;
-    
-    
 
     public void giveOrentation(String firstname, String lastName, String ssn,
             Date birthDate, String cubeID) {
@@ -35,8 +33,8 @@ public class Employee {
         this.meetDepartmentStaff();
         this.reviewDeptPolicies();
         this.moveIntoCubicle(cubeID);
-        
-        
+
+
     }
 
     public boolean isMeetWithHrForBenefitAndSalryInfo() {
@@ -62,7 +60,7 @@ public class Employee {
     }
 
     public void setReviewDeptPolicies(boolean reviewDeptPolicies) {
-       // needs valadition
+        // needs valadition
         this.reviewDeptPolicies = reviewDeptPolicies;
     }
 
@@ -101,14 +99,13 @@ public class Employee {
         //needs valadition
         this.moveIntoCubicle = movedIn;
     }
-    
 
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
-        if(firstName == null){
+        if (firstName == null) {
             System.out.println("Enter a Valid first name");
         }
         this.firstName = firstName;
@@ -146,13 +143,14 @@ public class Employee {
     }
 
     public void setCubeId(String cubeId) {
-        if(cubeId == null){
-           System.out.println("Enter a valid cubicale ID");
-           
+        if (cubeId == null) {
+            System.out.println("Enter a valid cubicale ID");
+
         }
         this.cubeId = cubeId;
     }
-     public Employee() {
+
+    public Employee() {
     }
 
     // Assume this must be performed first
