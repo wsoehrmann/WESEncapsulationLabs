@@ -11,8 +11,8 @@ package lab2;
 public class GameCharacter {
 
     private String name;
-    private String race;
-    private String appearance;
+    private String race;// gives race of character elf,human dwarf
+    private String appearance;//height weight hair
 
     public String getName() {
         return name;
